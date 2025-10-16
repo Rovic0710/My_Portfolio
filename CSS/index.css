@@ -21,11 +21,11 @@ a {
     text-align: center;
 }
 
-.page1, .page2, .page3, .page4, .page5 {
+.nav_pages {
     font-size: 16px;
     padding: 10px;
 }
-.page1:hover, .page2:hover, .page3:hover, .page4:hover, .page5:hover {
+.nav_pages:hover{
     background-color: #0f0f0f;
 }
 
