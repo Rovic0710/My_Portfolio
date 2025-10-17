@@ -10,35 +10,51 @@ a {
 
 .main {
     display: grid;
-    grid-template-columns: 15% 85%;
+    grid-template-columns: 300px auto;
     height: 100vh;
 }
 
-.nav {
-    background-color: blue;
+.sidebar {
+    background-color: #0f0f0f;
     display: flex;
     flex-direction: column;
     text-align: center;
+    color: #ffffff;
 }
 
-.nav_pages {
+.logo {
+    background-color: #000000;
+    height: 70px;
+    width: 100%;
+}
+
+#logo_title {
+    border: 1px solid #ffffff;
+    height: 100%;
+    width: 80px;
+}
+
+hr {
+    border: 1px solid #ffffff;
+}
+
+.sidebar_pages {
     font-size: 16px;
     padding: 10px;
+    color: #ffffff;
 }
-.nav_pages:hover{
-    background-color: #0f0f0f;
+.sidebar_pages:hover{
+    background-color: #1c1c1c;
 }
 
 .container {
-    background-color: #0f0f0f;
-    display: flex;
-    justify-content: center;
+    background-color: #1c1c1c;
+    display: grid;
+    grid-template-rows: 80px 100%;
 }
 
-.container > .box {
-    background-color: #1c1c1c;
-    height: 92%;
-    width: 95%;
-    align-self: center;
-    border-radius: 20px;
+.container > .navbar {
+    background-color: #000000;
+    height: 70px;
+    width: 100%;
 }
