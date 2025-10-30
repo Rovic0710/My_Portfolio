@@ -16,8 +16,6 @@ a {
 
 .sidebar {
     background-color: #0f0f0f;
-    display: flex;
-    flex-direction: column;
     text-align: center;
     color: #ffffff;
 }
@@ -38,9 +36,18 @@ hr {
     border: 1px solid #ffffff;
 }
 
+nav > ul {
+    display: flex;
+    flex-direction: column;
+    min-height: 220px;
+    max-height: 300px;
+    margin-top: 20px;
+    gap: 20px;
+}
+
 .sidebar_pages {
-    font-size: 16px;
-    padding: 10px;
+    font-size: 20px;
+    border-radius: 10px;
     color: #ffffff;
 }
 .sidebar_pages:hover{
