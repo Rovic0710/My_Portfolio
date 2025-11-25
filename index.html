@@ -4,43 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
+    <link rel="stylesheet" href="./CSS/layout.css">
     <link rel="stylesheet" href="./CSS/index.css">
-    <script src="./JS/pages.js"></script>
+    <script src="./JS/pages.js" defer></script>
 </head>
 <body>
-    <div class="main">
-        <div class="sidebar">
+    <div class="layout">
+        <!-- ===== Sidebar ===== -->
+        <aside class="sidebar">
+            
             <!-- Logo -->
             <div class="logo">
-                <div id="logo_title">Logo</div>
+                <h1 class="logo-title">My Logo</h1>
             </div>
 
-            <!-- Navigation Section -->
-            <nav>
+            <!-- Navigation -->
+            <nav class="navigation" aria-label="Main Navigation">
                 <ul>
-                    <li><a href="/index.html" class="sidebar_pages">Home</a></li>
-                    <li><a href="./Pages/Resume.html" class="sidebar_pages">Resume</a></li>
-                    <li><a href="./Pages/Project.html" class="sidebar_pages">Projects</a></li>
-                    <li><a href="./Pages/Credential.html" class="sidebar_pages">Credentials</a></li>
-                    <li><a href="./Pages/Contact.html" class="sidebar_pages">Contacts</a></li>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="./Pages/Resume.html">Resume</a></li>
+                    <li><a href="./Pages/Project.html">Projects</a></li>
+                    <li><a href="./Pages/Credential.html">Credentials</a></li>
+                    <li><a href="./Pages/Contact.html">Contact</a></li>
                 </ul>
             </nav>
-            
-            <!-- My Links -->
-            <ul class="my_link">
-                <li>roviclinezo12@gmail.com</li>
-                <li>roviclinezo12@gmail.com</li>
-                <li>roviclinezo12@gmail.com</li>
-                <li>roviclinezo12@gmail.com</li>
-            </ul>
-        </div>
-        
-        <div class="container">
-            <div class="navbar">
 
+            <!-- Contact / Links -->
+            <div class="contact-info">
+                <p>Email: <a href="mailto:roviclinezo12@gmail.com">roviclinezo12@gmail.com</a></p>
+                <p>Email: <a href="mailto:roviclinezo12@gmail.com">roviclinezo12@gmail.com</a></p>
+                <p>Email: <a href="mailto:roviclinezo12@gmail.com">roviclinezo12@gmail.com</a></p>
             </div>
-            <div class="box"></div>
-        </div>
+
+        </aside>
+
+        <!-- ===== Main Content ===== -->
+        <main class="content">
+
+            <!-- Header -->
+            <header class="topbar">
+                <!-- top bar content here (theme toggle, profile, etc.) -->
+            </header>
+
+            <section class="content-body">
+                <div class="intro">
+                    <p>Hello, Welcome to my Portfolio<br>My Name is</p>
+                    <h2>Rovic Linezo</h2>
+                    <p>and Im an <strong>IT Helpdesk Support</strong><br>and an <strong>Aspiring Web Developer</strong></p>
+                </div>
+
+                <div class="bg-circle">
+                    <div class="circle"></div>
+                    <div class="circle2"></div>
+                </div>
+            </section>
+
+        </main>
+
     </div>
+
 </body>
 </html>
