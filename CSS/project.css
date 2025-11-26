@@ -1,7 +1,13 @@
 .content-body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #444;
+}
+
+.project {
+    display: flex;
 }
 
 .box, .box1, .box2 {
@@ -11,7 +17,7 @@
 }
 
 .box {
-    background-color: #1c1c1c;
+    background-color: #FFFFFF;
     transform: translateX(120px);
 }
 
@@ -23,6 +29,16 @@
 }
 
 .box2 {
-    background-color: #1c1c1c;
+    background-color: #FFFFFF;
     transform: translateX(-120px);
+}
+
+.dot {
+    background-color: #BBBBBB;
+    display: inline-flex;
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 40px 2px 0 2px;
+    border-radius: 50%;
 }
