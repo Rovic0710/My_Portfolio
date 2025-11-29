@@ -1,0 +1,13 @@
+.content-body {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.map iframe {
+    height: 100%;
+    width: 100%;
+}
+
+.contact-info {
+    background-color: #d4d4d4;
+}
