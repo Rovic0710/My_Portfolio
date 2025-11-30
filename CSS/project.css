@@ -3,33 +3,20 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #dddddd;
 }
 
 .project {
-    display: flex;
-}
-
-.box, .box1, .box2 {
-    height: 600px;
-    width: 400px;
-    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
 
 .box {
-    background-color: #919191;
-    transform: translateX(80px);
-}
-
-.box1 {
-    background-color: #000000;
-    margin-top: 80px;
-    transform: translateX(0);
-    z-index: 3;
-}
-
-.box2 {
-    background-color: #919191;
-    transform: translateX(-80px);
+    height: 600px;
+    width: 400px;
+    border-radius: 10px;
+    background-color: #ffffff;
 }
 
 .dot {
@@ -40,6 +27,9 @@
     width: 15px;
     margin: 40px 2px 0 2px;
     border-radius: 50%;
+}
+.dot.active {
+    background-color: #000000;
 }
 
 .button {
