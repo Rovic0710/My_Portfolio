@@ -1,50 +1,51 @@
-// Projects
+// SELECTORS
 const boxes = document.querySelectorAll(".box");
-const dots = document.querySelectorAll(".dot");
-const previous_btn = document.querySelector(".previous");
-const next_btn = document.querySelector(".next");
+const dots  = document.querySelectorAll(".dot");
+const prev  = document.querySelector(".previous");
+const next  = document.querySelector(".next");
 
+// SETTINGS
 const items_per_page = 3;
-const total_items = boxes.length;
-const total_pages = Math.ceil(total_items / items_per_page);
+const max_index = boxes.length - items_per_page;
 
-let current_page = 0;
+// STATE
+let current_index = 0;
 
-function show_page(page) {
+// FUNCTIONS
+function show_items(index) {
     boxes.forEach((box, i) => {
-        const start = page * items_per_page;
-        const end = start + items_per_page;
-        box.style.display = (i >= start && i < end) ? "block" : "none";
+        box.style.display = (i >= index && i < index + items_per_page) 
+                            ? "block" 
+                            : "none";
     });
-    update_dots(page);
+
+    update_dots(index);
 }
 
-function update_dots(page) {
+function update_dots(index) {
     dots.forEach((dot, i) => {
-        dot.classList.toggle("active", i === page);
+        dot.classList.toggle("active", i === index);
     });
 }
+
+// EVENTS
+next.addEventListener("click", () => {
+    current_index = (current_index >= max_index) ? 0 : current_index + 1;
+    show_items(current_index);
+});
+
+prev.addEventListener("click", () => {
+    current_index = (current_index <= 0) ? max_index : current_index - 1;
+    show_items(current_index);
+});
 
 dots.forEach((dot, i) => {
     dot.addEventListener("click", () => {
-        current_page = i;
-        show_page(current_page);
+        current_index = i;
+        show_items(current_index);
     });
 });
-show_page(0);
 
-previous_btn.addEventListener('click', () => {
-    current_page--;
-    if (current_page < 0) {
-        current_page = total_pages - 1;
-    }
-    show_page(current_page);
-});
-
-next_btn.addEventListener('click', () => {
-    current_page++;
-    if (current_page >= total_pages) {
-        current_page = 0;
-    }
-    show_page(current_page);
-});
+// INIT
+show_items(current_index);
+    

@@ -39,6 +39,7 @@
     width: 430px;
     border-radius: 50%;
     position: absolute;
+    z-index: 0;
 }
 
 .bg-circle .circle2 {
@@ -47,4 +48,9 @@
     width: 360px;
     border-radius: 50%;
     position: absolute;
+    z-index: 1;
+}
+
+.bg-circle img {
+    z-index: 2;
 }

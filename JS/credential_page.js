@@ -41,7 +41,14 @@ dots.forEach((dot, i) => {
         current_index = i;
         show_item(current_index);
     });
-})
+});
+
+const interval_time = 10000;
+
+setInterval(() => {
+    current_index = (current_index + 1) % box_item.length;
+    show_item(current_index);
+}, interval_time);
 
 // Skills
 const box_item2 = document.querySelectorAll(".box2");
