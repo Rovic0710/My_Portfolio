@@ -5,6 +5,11 @@
     gap: 5px;
 }
 
+.navigation ul .selected {
+    background-color: #ff0000;
+    border-radius: 10px;
+}
+
 .resume_btn {
     background-color: green;
     height: 24px;
@@ -24,10 +29,25 @@
     display: grid;
     grid-template-columns: 1fr 0.5fr;
     background-color: #dddddd;
-    border: 1px black solid;
     border-radius: 10px;
     padding: 10px;
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 5px #ff0000,
+                0 0 10px #0000ff;
+    animation: rgb-glow 3s linear infinite;
 }
+
+@keyframes rgb-glow {
+    0%, 100% {
+        box-shadow: 0 0 5px #ff0000,
+                    0 0 10px #0000ff
+    }
+    50% {
+        box-shadow: 0 0 5px #0000ff,
+                    0 0 10px #ff0000
+    }
+}
+
 .card h3 {
     padding: 0;
     margin: 0;

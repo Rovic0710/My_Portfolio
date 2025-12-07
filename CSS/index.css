@@ -4,6 +4,11 @@
     align-items: center;
 }
 
+.navigation ul .selected {
+    background-color: #ff0000;
+    border-radius: 10px;
+}
+
 .intro {
     margin-left: 150px;
     justify-content: center;
@@ -15,7 +20,7 @@
 }
 
 .intro strong {
-    color: red;
+    color: #ff0000;
 }
 
 .intro h2 {
@@ -34,7 +39,7 @@
 }
 
 .bg-circle .circle {
-    background-color: red;
+    background-color: #ff0000;
     height: 430px;
     width: 430px;
     border-radius: 50%;

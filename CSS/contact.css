@@ -4,6 +4,11 @@
     background-color: #dddddd;
 }
 
+.navigation ul .selected {
+    background-color: #ff0000;
+    border-radius: 10px;
+}
+
 .map {
     display: flex;
     align-items: center;
